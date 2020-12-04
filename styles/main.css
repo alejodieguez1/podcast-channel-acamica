@@ -1,0 +1,20 @@
+html {
+  font-size: 16px;
+  font-family: 'IBM Plex Mono', monospace; }
+
+.body-container {
+  max-width: 1440px; }
+
+.header-container {
+  background: #ffffff; }
+  .header-container .nav-container {
+    display: flex;
+    justify-content: space-between; }
+    .header-container .nav-container .nav-names {
+      display: flex;
+      flex-direction: row;
+      list-style: none; }
+      .header-container .nav-container .nav-names li {
+        padding: 10px; }
+
+/*# sourceMappingURL=main.css.map */
