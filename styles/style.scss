@@ -1,86 +1,101 @@
 html {
     font-size: 16px;
     font-family: 'IBM Plex Mono', monospace;
-    letter-spacing: 0rem;
+    letter-spacing: 0;
 }
-.header-container {
-    background: #ffffff;
-    height: 80px;
-    .nav-container {
+.body-container {
+    max-width: 1440px;
+}
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+    .logo {
+        width: 24px;
+        height: 24px;
+    }
+    .logo:hover {
+        transform: rotate(360deg);
+        transition: 0.2s;
+    }
+    .nav-names {
+        display: none;
+    }
+    #hmb-menu {
+        display: none;
+    }
+    .hmb-label {
+        margin: 5px;
+        cursor: pointer;
         display: flex;
-        justify-content: space-between;
-        padding: 0 40px;
-        .logo {
-            width: 2.1%;
-        }
-        .logo:hover {
-            transform: rotate(360deg);
-            transition: 0.5s;
-        }
-        .nav-names {
-            display: flex;
-            flex-direction: row;
-            list-style: none;
-            li {
-                line-height: 1.75rem;
-                padding: 10px;
-                margin: 10px;
-            }
-            li:hover {
-                color: #00F3BB;
-                text-decoration: line-through 1px;
-                font-weight: 500;
-                transition: 0.25s;
-            }
+        flex-direction: column;
+        .bar {
+            margin: 1px;
+            width: 18px;
+            height: 2px;
+            background-color: #000000;
+            border-radius: 5px;
         }
     }
+    #hmb-menu:checked ~ .hmb-label #bar1 {
+        transform: translate(0, 4px) rotate(40deg);
+        transition: 0.2s;
+    }
+    #hmb-menu:checked ~ .hmb-label #bar2 {
+        opacity: 0;
+        transform: translate(-4px);
+        transition: 0.2s;
+    }
+    #hmb-menu:checked ~ .hmb-label #bar3 {
+        transform: translate(0, -4px) rotate(-40deg);
+        transition: 0.2s;
+    }
 }
-main {
+.main {
     .intro {
-        width: 50%;
         margin: 0 auto;
-        padding: 110px;
+        padding: 10px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         h1 {
-            font-size: 4rem;
+            width: 80%;
+            font-size: 2.25rem;
             font-family: 'IBM Plex Sans', sans-serif;
             margin-bottom: 0px;
+            line-height: 42px;
+            align-self: start;
             .world {
-                text-decoration: line-through 4px;
+                text-decoration: line-through 2px;
             }
             .dot {
                 color: blue;
             }
         }
-        p {
-            width: 63%;
+        .first-p {
+            width: 97%;
+            font-size: 0.875rem;
             padding-top: 0px;
-            padding-right: 10px;
-            padding-bottom: 40px;
-            padding-left: 10px;
-            line-height: 1.5rem;
+            padding-bottom: 10px;
+            line-height: 1.375rem;
             letter-spacing: 0rem;
+            align-self: center;
         }
-        button {
+        .about-btn {
             border: none;
             background-color: #00F3BB;
             text-align: center;
-            width: 226px;
-            height: 56px;
+            width: 288px;
+            height: 48px;
             font-weight: 500;
             letter-spacing: 0rem;
+            align-self: center;
         }
-        button:hover {
+        .about-btn:hover {
             color: white;
             background-image: linear-gradient(250deg, #0000FE 0%, #00F0B8 100%);
             transition: 0.5s;
         }
-    }
-}
-@media (min-width: 700px) {
-    ul {
-        display: inline;
     }
 }
