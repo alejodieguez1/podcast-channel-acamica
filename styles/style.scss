@@ -6,6 +6,7 @@ html {
 .body-container {
     max-width: 1440px;
 }
+/* NAVIGATION SECTION  */
 .nav-container {
     display: flex;
     flex-direction: row;
@@ -17,12 +18,12 @@ html {
     }
     .logo:hover {
         transform: rotate(360deg);
-        transition: 0.2s;
-    }
-    .nav-names {
-        display: none;
+        transition: 0.5s;
     }
     #hmb-menu {
+        display: none;
+    }
+    .nav-names {
         display: none;
     }
     .hmb-label {
@@ -38,6 +39,7 @@ html {
             border-radius: 5px;
         }
     }
+    /* HAMBURGUER MENU ANIMATIONS */
     #hmb-menu:checked ~ .hmb-label #bar1 {
         transform: translate(0, 4px) rotate(40deg);
         transition: 0.2s;
@@ -51,7 +53,11 @@ html {
         transform: translate(0, -4px) rotate(-40deg);
         transition: 0.2s;
     }
+    #hmb-menu:checked ~ .nav-names {
+        display: block;
+    }
 }
+/* TOP SECTION */
 .main {
     .intro {
         margin: 0 auto;
