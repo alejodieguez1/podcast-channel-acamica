@@ -3,12 +3,16 @@ html {
   font-family: 'IBM Plex Mono', monospace;
   letter-spacing: 0; }
 
+body {
+  max-width: 1440px; }
+
 .body-container {
   max-width: 1440px; }
 
 /* NAVIGATION SECTION  */
 .nav-container {
-  padding-top: 15px; }
+  padding-top: 15px;
+  /* NAVIGATION ANIMATIONS AND MENU */ }
   .nav-container .logo {
     padding-left: 10px;
     width: 24px;
@@ -32,13 +36,13 @@ html {
     max-height: 0;
     transition: max-height 0.2s ease; }
   .nav-container ul {
-    width: 100%;
     background: #0000FE;
     display: flex;
     flex-direction: column; }
     .nav-container ul li {
       list-style: none;
-      padding: 15px; }
+      padding: 15px;
+      overflow: hidden; }
       .nav-container ul li a {
         color: #ffffff;
         text-decoration: none; }
@@ -56,47 +60,60 @@ html {
     transition: 0.2s ease-out; }
 
 /* TOP SECTION */
-.main .intro {
+.main .intro-container {
   margin: 0 auto;
-  padding: 10px;
+  padding: 0 10px 10px;
   display: flex;
   flex-direction: column;
   align-items: flex-start; }
-  .main .intro h1 {
+  .main .intro-container h1 {
     width: 80%;
     font-size: 2.25rem;
     font-family: 'IBM Plex Sans', sans-serif;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     line-height: 42px;
     align-self: start; }
-    .main .intro h1 .world {
+    .main .intro-container h1 .world {
       text-decoration: line-through 2px; }
-    .main .intro h1 .dot {
+    .main .intro-container h1 .dot {
       color: blue; }
-  .main .intro .first-p {
+  .main .intro-container .first-p {
     width: 97%;
     font-size: 0.875rem;
-    padding-top: 0px;
+    padding-top: 0;
     padding-bottom: 10px;
     line-height: 1.375rem;
-    letter-spacing: 0rem;
+    letter-spacing: 0;
     align-self: center; }
-  .main .intro .about-btn {
+  .main .intro-container .about-btn {
     border: none;
     background-color: #00F3BB;
     text-align: center;
     width: 288px;
     height: 48px;
     font-weight: 500;
-    letter-spacing: 0rem;
+    letter-spacing: 0;
     align-self: center; }
-  .main .intro .about-btn:hover {
-    color: white;
-    background-image: linear-gradient(250deg, #0000FE 0%, #00F0B8 100%);
-    transition: 0.5s; }
+
+/* EPISODES SECTION */
+.episodes-container {
+  background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px; }
+  .episodes-container h1 {
+    font-size: 2.25rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #ffffff;
+    line-height: 42px; }
 
 @media all and (min-width: 768px) {
   .hmb-menu {
-    display: none; } }
+    display: none; }
+
+  .about-btn:hover {
+    color: white;
+    background-image: linear-gradient(250deg, #0000FE 0%, #00F0B8 100%);
+    transition: 0.5s; } }
 
 /*# sourceMappingURL=main.css.map */
