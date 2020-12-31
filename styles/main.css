@@ -92,20 +92,48 @@ body {
     width: 288px;
     height: 48px;
     font-weight: 500;
-    letter-spacing: 0; }
+    letter-spacing: 0;
+    margin-bottom: 24px; }
 
 /* EPISODES SECTION */
-.episodes-container {
+.episodes-section {
+  padding: 10px;
   background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+  clip-path: polygon(0 4%, 100% 0, 100% 95%, 0% 100%); }
+  .episodes-section .episodes-container {
+    display: flex;
+    flex-direction: column; }
+    .episodes-section .episodes-container h2 {
+      margin-left: 10px;
+      padding-top: 30px;
+      font-size: 2.25rem;
+      font-family: 'IBM Plex Sans', sans-serif;
+      color: #ffffff;
+      line-height: 42px; }
+    .episodes-section .episodes-container iframe {
+      margin: 0;
+      padding: 0; }
+
+/* ABOUT SECTION */
+.about-section .about-container {
   display: flex;
-  flex-direction: column; }
-  .episodes-container h1 {
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0 10px 10px; }
+  .about-section .about-container .phone-pic {
+    align-self: flex-start;
+    width: 360px;
+    height: 519px; }
+  .about-section .about-container .title {
     font-size: 2.25rem;
     font-family: 'IBM Plex Sans', sans-serif;
-    color: #ffffff;
     line-height: 42px; }
+  .about-section .about-container .second-p {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    letter-spacing: 0; }
 
-/*  RESPONSIVE SECTION  */
+/* RESPONSIVE SECTION */
 @media all and (min-width: 768px) {
   .body-container {
     max-width: 1440px; }
@@ -174,6 +202,10 @@ body {
   .about-btn:hover {
     color: white;
     background-image: linear-gradient(250deg, #0000FE 0%, #00F0B8 100%);
-    transition: 0.5s; } }
+    transition: 0.5s; }
+
+  .episodes-section {
+    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
+    padding: 150px; } }
 
 /*# sourceMappingURL=main.css.map */
