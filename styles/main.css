@@ -34,7 +34,8 @@ body {
       border-radius: 5px; }
   .nav-container .nav-names {
     max-height: 0;
-    transition: max-height 0.2s ease; }
+    transition: max-height 0.2s ease;
+    overflow: hidden; }
   .nav-container ul {
     background: #0000FE;
     display: flex;
@@ -95,11 +96,12 @@ body {
     height: 48px;
     font-weight: 500;
     letter-spacing: 0;
-    margin-bottom: 24px; }
+    margin-bottom: 24px;
+    cursor: pointer; }
 
 /* EPISODES SECTION */
 .episodes-section {
-  padding: 10px;
+  padding: 6px;
   background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
   clip-path: polygon(0 3%, 100% 0, 100% 97%, 0% 100%);
   height: 1200px; }
@@ -116,6 +118,7 @@ body {
       line-height: 42px;
       font-weight: 400; }
     .episodes-section .episodes-container iframe {
+      border: none;
       margin: 5px;
       padding: 0; }
 
@@ -128,11 +131,12 @@ body {
   padding: 10px; }
   .about-section .about-container .phone-pic {
     position: relative;
-    width: 360px;
+    width: 320px;
     height: 559px;
     top: -60px;
-    transform: translateX(-30px); }
+    transform: translateX(-10px); }
   .about-section .about-container .title {
+    padding-right: 10px;
     font-size: 2.25rem;
     font-family: 'IBM Plex Sans', sans-serif;
     line-height: 42px;
@@ -152,8 +156,8 @@ body {
     line-height: 42px;
     font-weight: 400; }
   .guests-section .guests-container .people-images {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     width: 320px;
     height: 243px; }
 
@@ -172,7 +176,7 @@ body {
     text-align: center;
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 1.5rem;
-    letter-spacing: 0rem;
+    letter-spacing: 0;
     font-weight: bolder;
     padding-bottom: 30px; }
   .topics-section .topics-container .icons {
@@ -182,7 +186,7 @@ body {
 
 /* NEWS SECTION */
 .news-section {
-  padding: 10px;
+  padding: 15px;
   background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
   clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
   height: 290px; }
@@ -203,7 +207,21 @@ body {
       width: 288px;
       height: 48px;
       font-weight: 500;
-      letter-spacing: 0; }
+      letter-spacing: 0;
+      cursor: pointer; }
+
+.footer-section .footer-container {
+  padding: 10px 10px 20px; }
+  .footer-section .footer-container p {
+    font-size: 0.875rem;
+    text-align: center; }
+  .footer-section .footer-container .social-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; }
+    .footer-section .footer-container .social-container a {
+      color: black;
+      line-height: 1.75rem; }
 
 /* RESPONSIVE SECTION */
 @media all and (min-width: 768px) {
@@ -215,27 +233,26 @@ body {
       max-width: 1440px; }
       .body-container .main .intro-container {
         max-width: 1440px;
-        margin: 70px;
-        margin-bottom: 0;
+        margin: 70px 70px 0;
         display: flex;
         flex-direction: column;
         align-items: flex-start; }
         .body-container .main .intro-container h1 {
           font-size: 4rem;
           font-family: 'IBM Plex Sans', sans-serif;
-          margin-bottom: 0px; }
+          margin-bottom: 0; }
           .body-container .main .intro-container h1 .world {
             text-decoration: line-through 4px; }
           .body-container .main .intro-container h1 .dot {
             color: blue; }
         .body-container .main .intro-container p {
           width: 50%;
-          padding-top: 0px;
+          padding-top: 0;
           padding-right: 10px;
           margin-bottom: 56px;
           padding-left: 10px;
           line-height: 1.5rem;
-          letter-spacing: 0rem; }
+          letter-spacing: 0; }
         .body-container .main .intro-container button {
           font-size: 1.125rem;
           border: none;
@@ -244,7 +261,7 @@ body {
           width: 226px;
           height: 56px;
           font-weight: 500;
-          letter-spacing: 0rem; }
+          letter-spacing: 0; }
     .body-container .nav-container {
       max-width: 1440px;
       display: flex;
@@ -263,8 +280,7 @@ body {
         max-height: 300px;
         background: #ffffff; }
         .body-container .nav-container .nav-names li {
-          padding: 28px;
-          padding-top: 15px; }
+          padding: 15px 28px 28px; }
         .body-container .nav-container .nav-names a {
           color: #060A24; }
         .body-container .nav-container .nav-names a:hover {
@@ -277,6 +293,15 @@ body {
     color: white;
     background-image: linear-gradient(250deg, #0000FE 0%, #00F0B8 100%);
     transition: 0.5s; }
+
+  .news-btn:hover {
+    color: white;
+    background-image: linear-gradient(250deg, #0000FE 0%, #00F0B8 100%);
+    transition: 0.5s; }
+
+  .social-icons:hover {
+    font-size: 1.5rem;
+    transition: 0.25s; }
 
   .episodes-section {
     clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
