@@ -81,7 +81,7 @@ body {
     .main .intro-container h1 .world {
       text-decoration: line-through 2px; }
     .main .intro-container h1 .dot {
-      color: blue; }
+      color: black; }
   .main .intro-container .first-p {
     width: 97%;
     font-size: 0.875rem;
