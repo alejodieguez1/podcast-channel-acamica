@@ -89,7 +89,7 @@ body {
     padding-bottom: 10px;
     line-height: 1.375rem;
     letter-spacing: 0; }
-  .main .intro-container .about-btn {
+  .main .intro-container .all-btn {
     border: none;
     background-color: #00F3BB;
     text-align: center;
@@ -102,7 +102,7 @@ body {
 
 /* EPISODES SECTION */
 .episodes-section {
-  padding: 6px;
+  padding: 4px;
   background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
   clip-path: polygon(0 3%, 100% 0, 100% 97%, 0% 100%);
   height: 1200px; }
@@ -119,6 +119,8 @@ body {
       line-height: 42px;
       font-weight: 400; }
     .episodes-section .episodes-container iframe {
+      width: 301px;
+      height: 232px;
       border: none;
       margin: 5px;
       padding: 0; }
@@ -201,7 +203,7 @@ body {
       line-height: 42px;
       padding-left: 10px;
       color: #ffffff; }
-    .news-section .news-container .news-btn {
+    .news-section .news-container .all-btn {
       border: none;
       background-color: #00F3BB;
       text-align: center;
@@ -228,6 +230,32 @@ body {
 @media all and (min-width: 768px) {
   .body-container {
     max-width: 1440px; }
+    .body-container .nav-container {
+      max-width: 1440px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+      .body-container .nav-container .logo {
+        margin-left: 100px;
+        padding-top: 20px;
+        width: 36px;
+        height: 36px; }
+      .body-container .nav-container .hmb-label {
+        display: none; }
+      .body-container .nav-container .nav-names {
+        display: flex;
+        flex-direction: row;
+        max-height: 300px;
+        background: #ffffff; }
+        .body-container .nav-container .nav-names li {
+          padding: 15px 28px 28px; }
+        .body-container .nav-container .nav-names a {
+          color: #060A24; }
+        .body-container .nav-container .nav-names a:hover {
+          color: #00F3BB;
+          text-decoration: line-through 1px;
+          font-weight: 500;
+          transition: 0.25s; }
     .body-container .main {
       display: flex;
       justify-content: center;
@@ -263,49 +291,36 @@ body {
           height: 56px;
           font-weight: 500;
           letter-spacing: 0; }
-    .body-container .nav-container {
-      max-width: 1440px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between; }
-      .body-container .nav-container .logo {
-        margin-left: 100px;
-        padding-top: 20px;
-        width: 36px;
-        height: 36px; }
-      .body-container .nav-container .hmb-label {
-        display: none; }
-      .body-container .nav-container .nav-names {
+    .body-container .episodes-section {
+      clip-path: polygon(0 15%, 100% 0, 100% 85%, 0% 100%);
+      padding: 150px;
+      height: 800px; }
+      .body-container .episodes-section .episodes-container {
+        max-width: 1440px;
         display: flex;
-        flex-direction: row;
-        max-height: 300px;
-        background: #ffffff; }
-        .body-container .nav-container .nav-names li {
-          padding: 15px 28px 28px; }
-        .body-container .nav-container .nav-names a {
-          color: #060A24; }
-        .body-container .nav-container .nav-names a:hover {
-          color: #00F3BB;
-          text-decoration: line-through 1px;
-          font-weight: 500;
-          transition: 0.25s; }
+        flex-direction: column; }
+        .body-container .episodes-section .episodes-container .ep-title {
+          font-size: 3rem; }
+        .body-container .episodes-section .episodes-container .iframe-container {
+          display: flex;
+          flex-direction: row; }
+          .body-container .episodes-section .episodes-container .iframe-container iframe {
+            width: 584px;
+            height: 232px; }
+          .body-container .episodes-section .episodes-container .iframe-container .episodes {
+            display: flex;
+            flex-direction: row;
+            padding: 60px;
+            padding-left: 0px;
+            padding-top: 0px; }
 
-  .about-btn:hover {
-    color: white;
-    background-image: linear-gradient(250deg, #0000FE 0%, #00F0B8 100%);
-    transition: 0.5s; }
-
-  .news-btn:hover {
+  .all-btn:hover {
     color: white;
     background-image: linear-gradient(250deg, #0000FE 0%, #00F0B8 100%);
     transition: 0.5s; }
 
   .social-icons:hover {
     font-size: 1.5rem;
-    transition: 0.25s; }
-
-  .episodes-section {
-    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
-    padding: 150px; } }
+    transition: 0.25s; } }
 
 /*# sourceMappingURL=main.css.map */
