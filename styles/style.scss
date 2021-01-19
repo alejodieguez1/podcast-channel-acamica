@@ -14,7 +14,7 @@ body {
 .nav-container {
     padding-top: 15px;
     .logo {
-        padding-left: 1rem;
+        padding-left: 1.2rem;
         width: 1.5rem;
         height: 1.5rem;
     }
@@ -79,7 +79,7 @@ body {
     .intro-container {
         max-width: 320px;
         margin: 0 auto;
-        padding: 0 10px 10px;
+        padding: 0 20px 10px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -106,7 +106,7 @@ body {
             line-height: 1.375rem;
             letter-spacing: 0;
         }
-        .all-btn {
+        .first-btn {
             border: none;
             background-color: #00F3BB;
             text-align: center;
@@ -197,16 +197,20 @@ body {
 }
 /* TOPICS SECTION */
 .topics-section {
+    .third-title {
+        font-size: 2.25rem;
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-weight: 400;
+        line-height: 42px;
+        padding-left: 10px;
+    }
     .topics-container {
         max-width: 320px;
         display: flex;
         flex-direction: column;
-        .third-title {
-            font-size: 2.25rem;
-            font-family: 'IBM Plex Sans', sans-serif;
-            font-weight: 400;
-            line-height: 42px;
-            padding-left: 10px;
+        .topic-container {
+            display: flex;
+            flex-direction: column;
         }
         .topics {
             text-align: center;
@@ -240,7 +244,7 @@ body {
             padding-left: 10px;
             color: #ffffff;
         }
-        .all-btn {
+        .second-btn {
             border: none;
             background-color: #00F3BB;
             text-align: center;
@@ -284,6 +288,10 @@ body {
                 padding-top: 20px;
                 width: 36px;
                 height: 36px;
+            }
+            .logo:hover {
+                transform: scale(1.1);
+                transition: 0.5s;
             }
             .hmb-label {
                 display: none;
@@ -361,30 +369,183 @@ body {
                 display: flex;
                 flex-direction: column;
                 .iframe-container {
+                    max-width: 1440px;
                     display: flex;
                     flex-direction: row;
                     iframe {
                         width: 584px;
                         height: 232px;
                     }
+                    .eps-container {
+                        transform: translateX(-60px);
+                    }
                     .episodes {
+                        padding: 30px;
                         display: flex;
                         flex-direction: row;
-                        padding: 60px;
-                        padding-left: 0px;
-                        padding-top: 0px;
+                    }
+                }
+            }
+        }
+        .about-section {
+            .about-container {
+                max-width: 1440px;
+                display: flex;
+                flex-direction: row;
+                .phone-container {
+                    padding-left: 270px;
+                    .phone-pic {
+                        transform: translateY(-100px);
+                        width: 457.6px;
+                        height: 700px;
+                    }
+                }
+                .info-container {
+                    padding-left: 15px;
+                    .title {
+                        font-size: 3rem;
+                    }
+                    .second-p {
+                        width: 65%;
+                        font-size: 1rem;
+                        line-height: 1.5rem;
+                    }
+                }
+            }
+        }
+        .guests-section {
+            .guests-container {
+                max-width: 1440px;
+                .second-title {
+                    padding-left: 220px;
+                    font-size: 3rem;
+                }
+                .guests-photos {
+                    .people-container {
+                        display: flex;
+                        flex-direction: row;
+                        .people-images {
+                            height: 364px;
+                            width: 480px;
+                        }
+                    }
+                }
+            }
+        }
+        .topics-section {
+            .third-title {
+                padding: 20px;
+                padding-left: 170px;
+                font-size: 3rem;
+            }
+            .topics-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                max-width: 1440px;
+                padding: 0px 150px;
+                .topic-container {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+        .news-section {
+            padding: 200px;
+            background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+            clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
+            height: 150px;
+            .news-container {
+                max-width: 1440px;
+                display: flex;
+                flex-direction: column;
+                .fourth-title {
+                    font-size: 3rem;
+                }
+                .second-btn {
+                    align-self: center;
+                    width: 345px;
+                    height: 56px;
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+            }
+        }
+        .footer-section {
+            .footer-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                .footer-p {
+                    padding-left: 100px;
+                    font-size: 1rem;
+                    line-height: 1.75rem;
+                }
+                .social-container {
+                    padding-top: 20px;
+                    padding-right: 100px;
+                    a {
+                        font-size: 1.125rem;
+                        line-height: 1.75rem;
+                        padding-right: 36px;
+                    }
+                    .social-icons:hover {
+                        transform: scale(1.1);
+                        transform-origin: center;
+                        transition: 0.5s;
                     }
                 }
             }
         }
     }
-    .all-btn:hover {
+    .first-btn:hover, .second-btn:hover {
         color: white;
         background-image: linear-gradient(250deg, #0000FE 0%, #00F0B8 100%);
         transition: 0.5s;
+        box-shadow: 0px 0px 2px;
+        border-radius: 5px;
     }
-    .social-icons:hover {
-        font-size: 1.5rem;
-        transition: 0.25s;
+}
+@media all and (min-width: 1450px) {
+    body {
+        max-width: 1903px;
+    }
+    .body-container {
+        max-width: 1903px;
+    }
+    .nav-container {
+        margin-left: 150px;
+        max-width: 1903px;
+    }
+    .news-container {
+        max-width: 1903px;
+    }
+    .about-container {
+        max-width: 1903px;
+    }
+    .topics-container {
+        max-width: 1903px;
+    }
+    .guests-container {
+        max-width: 1903px;
+        .guests-photos {
+            margin-left: 230px;
+            .people-images {
+                width: 680px;
+                height: 564px;
+            }
+        }
+    }
+    .footer-container {
+        max-width: 1903px;
+    }
+    .episodes-container {
+        .ep-title {
+            padding-left: 150px;
+        }
+        max-width: 1903px;
+        .iframe-container {
+            padding-left: 150px;
+        }
     }
 }
