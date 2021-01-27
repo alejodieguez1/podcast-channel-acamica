@@ -234,6 +234,38 @@ body {
       line-height: 1.75rem; }
 
 /* RESPONSIVE SECTION */
+@media all and (min-width: 320px) {
+  .episodes-container {
+    align-items: center; } }
+@media all and (min-width: 576px) {
+  .episodes-section {
+    clip-path: polygon(0 15%, 100% 0, 100% 85%, 0% 100%);
+    padding: 150px;
+    padding-left: 400px;
+    height: 800px; }
+    .episodes-section .episodes-container {
+      max-width: 1440px;
+      display: flex;
+      flex-direction: column;
+      align-items: initial; }
+      .episodes-section .episodes-container .ep-title {
+        padding-right: 450px;
+        font-size: 3rem; }
+      .episodes-section .episodes-container .iframe-container {
+        max-width: 1440px;
+        display: flex;
+        flex-direction: column; }
+        .episodes-section .episodes-container .iframe-container iframe {
+          width: 301px;
+          height: 232px; }
+        .episodes-section .episodes-container .iframe-container .eps-container {
+          transform: translateX(-60px);
+          display: flex;
+          flex-direction: row; }
+        .episodes-section .episodes-container .iframe-container .episodes {
+          padding: 10px;
+          display: flex;
+          flex-direction: row; } }
 @media all and (min-width: 768px) {
   .body-container {
     max-width: 1440px; }
@@ -314,7 +346,7 @@ body {
         .body-container .episodes-section .episodes-container .iframe-container {
           max-width: 1440px;
           display: flex;
-          flex-direction: row; }
+          flex-direction: column; }
           .body-container .episodes-section .episodes-container .iframe-container iframe {
             width: 584px;
             height: 232px; }
